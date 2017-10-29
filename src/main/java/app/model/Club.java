@@ -1,5 +1,4 @@
-package hello.model;
-
+package app.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,16 +10,16 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Club {
+public class Club{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name="clubname", nullable=false, length=100)
+    @Column(nullable = false, unique = true)
     private String clubname;
 
-    @Column(name="genre", nullable=false, length=100)
+    @Column(nullable = false)
     private String genre;
-
 }
+

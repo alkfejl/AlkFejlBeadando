@@ -1,5 +1,4 @@
-package hello.model;
-
+package app.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,16 +10,19 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Band {
+public class Event{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name="bandname", nullable=false, length=100)
+    @Column(nullable = false)
+    private String date;
+
+    @Column(nullable = false)
+    private String clubname;
+
+    @Column(nullable = false)
     private String bandname;
-
-    @Column(name="genre", nullable=false, length=100)
-    private String genre;
-
 }
+

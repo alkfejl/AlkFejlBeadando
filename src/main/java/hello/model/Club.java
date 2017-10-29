@@ -11,19 +11,16 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Club {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name="email", nullable=false, unique = true, length=100)
-    private String email;
+    @Column(name="clubname", nullable=false, length=100)
+    private String clubname;
 
-    @Column(name="password", nullable=false, length=100)
-    private String password;
-
-    @Column(name="role", nullable=false, length=20)
-    private String role;
+    @Column(name="genre", nullable=false, length=100)
+    private String genre;
 
 }

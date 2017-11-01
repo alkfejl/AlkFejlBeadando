@@ -1,12 +1,13 @@
 # Dokumentáció
 ### Fejlesztői környezet bemutatása, beállítása, használt technológiák
-A használt fejlesztő környezet a gyakorlatokon is megismert IntelliJ IDEA Community Edition. A szoftver könnyedén letölthető a hivatalos weboldalról, azaz a https://www.jetbrains.com/idea/-ról. Itt az Ultimate edition is választható, melyet 14 napig használhatjuk/kipróbálhatjuk ingyen. Ezek után egy viszonylag gyors egyszerű telepítés és máris fent a gépünkön a program. Egyébként az IntelliJ IDEA első verzióját 2001 januárjában adták ki, és akkoriban egyike volt azoknak az elsőként elérhető Java IDE-knek, melyek továbbfejlesztett kód navigációval és kód refaktorálási képességekkel volt felvértezve.
+A használt fejlesztő környezet a gyakorlatokon is megismert IntelliJ IDEA Community Edition. A szoftver könnyedén letölthető a hivatalos weboldalról, azaz a https://www.jetbrains.com/idea/ -ról. Itt az Ultimate edition is választható, melyet 14 napig használhatjuk/kipróbálhatjuk ingyen. Ezek után egy viszonylag gyors egyszerű telepítés és máris fent a gépünkön a program. Egyébként az IntelliJ IDEA első verzióját 2001 januárjában adták ki, és akkoriban egyike volt azoknak az elsőként elérhető Java IDE-knek, melyek továbbfejlesztett kód navigációval és kód refaktorálási képességekkel volt felvértezve.
 
-A beállításoknál fontos megállapítani, hogy általában nem fogja magától megtalálni a JDK-t (Java Development Kit), így ezt manuálisan kell a File->Project Structure-ben ezt hozzá adni. Ami még szintén fontos, hogy jobb felül a "Select Run/Debug Configuration" (A build és a Run között)-ben pedig a Maven-en belül a Command Line-hoz be kell írnunk, hogy "spring-boot:run".
+A beállításoknál fontos megállapítani, hogy általában nem fogja magától megtalálni a JDK-t (Java Development Kit), így ezt manuálisan kell a File->Project Structure-ben hozzá adni. Ami még szintén fontos, hogy jobb felül a "Select Run/Debug Configuration" (A build és a Run között)-ben pedig a Maven-en belül a Command Line-hoz be kell írnunk, hogy "spring-boot:run".
 
 Használt technológiák?
 
 ### Adatbázis-terv: táblák kapcsolati UML diagramja
+![UML diagram](UML.png)
 ### Alkalmazott könyvtárstruktúra bemutatása
 ### Végpont-tervek és leírások
 ### 1 db végpont működésének leírása, mi történik, milyen lépések követik egymást (szekvenciadiagram)

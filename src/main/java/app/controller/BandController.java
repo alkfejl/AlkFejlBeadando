@@ -1,17 +1,24 @@
 package app.controller;
 
 import app.model.Band;
+import app.service.Session;
 import app.service.annotations.Role;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import static app.model.User.Role.BANDMASTER;
+
+
 
 @RestController
 public class BandController {
 
+    @Autowired
+    Session session;
+
     @Role({BANDMASTER})
     @GetMapping("/band")
     private String myBand() {
-        return "zenekarom";
+        return session.getUser().getRole().toString();
     }
 
     @Role({BANDMASTER})

@@ -16,6 +16,9 @@ public class Club{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(nullable = false)
+    private String clubmaster;
+
     @Column(nullable = false, unique = true)
     private String clubname;
 

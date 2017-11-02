@@ -16,6 +16,9 @@ public class Band{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(nullable = false)
+    private String bandmaster;
+
     @Column(nullable = false, unique = true)
     private String bandname;
 

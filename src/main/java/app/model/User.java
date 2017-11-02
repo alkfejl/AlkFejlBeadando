@@ -25,10 +25,24 @@ public class User{
     @Column(nullable = false)
     private String password;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String role;
+    private Role role;
 
-    public void setRole(String role) {
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public enum Role {
+        GUEST, BANDMASTER, CLUBMASTER, ADMIN;
+        private String password;
+    }
+
+    public void setRole(Role role) {
         this.role = role;
     }
 
@@ -38,5 +52,9 @@ public class User{
 
     public String getPassword() {
         return password;
+    }
+
+    public Role getRole() {
+        return role;
     }
 }

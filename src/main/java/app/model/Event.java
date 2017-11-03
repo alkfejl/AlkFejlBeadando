@@ -24,5 +24,13 @@ public class Event{
 
     @Column(nullable = false)
     private String bandname;
+
+    public String getDate() {
+        return date;
+    }
+
+    public long getId() {
+        return id;
+    }
 }
 

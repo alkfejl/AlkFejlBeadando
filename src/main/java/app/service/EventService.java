@@ -13,4 +13,10 @@ public class EventService {
     public void newEvent(Event event) {
         eventRepository.save(event);
     }
+
+    public void updateEvent(Event event) {
+        Event currentEvent = eventRepository.findOne(event.getId() + "");
+        eventRepository.delete(currentEvent);
+        eventRepository.save(event);
+    }
 }

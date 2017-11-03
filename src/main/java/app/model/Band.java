@@ -24,5 +24,13 @@ public class Band{
 
     @Column(nullable = false)
     private String genre;
+
+    public String getBandmaster() {
+        return bandmaster;
+    }
+
+    public long getId() {
+        return id;
+    }
 }
 

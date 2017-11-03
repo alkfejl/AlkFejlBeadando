@@ -13,4 +13,10 @@ public class ClubService {
     public void newClub(Club club) {
         clubRepository.save(club);
     }
+
+    public void updateClub(Club club) {
+        Club currentClub = clubRepository.findOne(club.getId() + "");
+        clubRepository.delete(currentClub);
+        clubRepository.save(club);
+    }
 }

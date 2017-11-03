@@ -24,5 +24,13 @@ public class Club{
 
     @Column(nullable = false)
     private String genre;
+
+    public String getClubmaster() {
+        return clubmaster;
+    }
+
+    public long getId() {
+        return id;
+    }
 }
 

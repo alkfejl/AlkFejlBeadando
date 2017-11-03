@@ -8,7 +8,4 @@ import java.util.Optional;
 
 @Repository
 public interface EventRepository extends CrudRepository<Event, String> {
-    Optional<Event> findByClubname(String clubname);
-
-    Optional<Event> findByBandname(String bandname);
 }

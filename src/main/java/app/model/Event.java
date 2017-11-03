@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -24,6 +25,14 @@ public class Event{
 
     @Column(nullable = false)
     private String bandname;
+
+    @OneToMany(targetEntity = Band.class,
+            cascade = CascadeType.ALL)
+    private List<Band> bandList;
+
+    @OneToOne(targetEntity = Club.class,
+            cascade = CascadeType.ALL)
+    private Club club;
 
     public String getDate() {
         return date;

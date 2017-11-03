@@ -29,6 +29,14 @@ public class User{
     @Column(nullable = false)
     private Role role;
 
+    @JoinColumn
+    @OneToOne(targetEntity = Band.class)
+    private Band band;
+
+    @JoinColumn
+    @OneToOne(targetEntity = Club.class)
+    private Club club;
+
     public void setUsername(String username) {
         this.username = username;
     }

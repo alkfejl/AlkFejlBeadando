@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -24,6 +25,14 @@ public class Band{
 
     @Column(nullable = false)
     private String genre;
+
+    @OneToMany(targetEntity = Event.class,
+            cascade = CascadeType.ALL)
+    private List<Event> eventList;
+
+    @OneToMany(targetEntity = Club.class,
+            cascade = CascadeType.ALL)
+    private List<Club> clubList;
 
     public String getBandmaster() {
         return bandmaster;
